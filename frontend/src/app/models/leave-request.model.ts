@@ -18,3 +18,13 @@ export interface LeaveRequest {
   status: number;
   days: number;
 }
+
+export interface CreateLeaveRequestDto {
+  employeeId: number;
+  type: LeaveType;
+  startDate: string; // 'yyyy-MM-dd' from <input type="date">
+  endDate: string;
+}
+
+export enum LeaveType { Vacation = 0, Sick = 1, Unpaid = 2 }
+export enum LeaveStatus { Pending = 0, Approved = 1, Rejected = 2 }

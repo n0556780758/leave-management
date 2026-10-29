@@ -9,3 +9,30 @@ button {
 button:hover {
   background: #186faf;
 }
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: .75rem;
+  max-width: 20rem;
+}
+
+.error {
+  color: #b00020;
+}
+
+.notice {
+  padding: .5rem .75rem;
+  margin: .75rem 0;
+  border-radius: 4px;
+}
+
+.notice--success {
+  background: #e6f4ea;
+  color: #1e4620;
+}
+
+.notice--error {
+  background: #fdecea;
+  color: #7a1c1c;
+}
