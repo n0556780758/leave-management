@@ -1,5 +1,6 @@
 using System.Text.Json.Serialization;
 using LeaveManagement.Api.Data;
+using LeaveManagement.Api.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,6 +27,7 @@ builder.Services.AddControllers()
         o.JsonSerializerOptions.ReferenceHandler = ReferenceHandler.IgnoreCycles);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<LeaveRequestService>();
 
 builder.Services.AddCors(options =>
 {
